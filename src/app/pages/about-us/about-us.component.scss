@@ -6,7 +6,8 @@
   height: 100%;
   position: relative;
   .content {
-    padding: 30px;
+    color: #363636;
+    padding: 40px;
     margin: 50px;
     background-color: rgba(240, 248, 255, 0.5);
     position: absolute;
@@ -16,6 +17,7 @@
     left: 0;
     right: 0;
     overflow-y: scroll;
+    border-radius: 5px;
     h1 {
       font-size: 36px;
       margin-bottom: 30px;
