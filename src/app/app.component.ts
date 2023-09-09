@@ -11,5 +11,5 @@ import { HeaderComponent } from './components/header/header.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pawsupport';
+  title = 'Animal Rescue Georgia';
 }
