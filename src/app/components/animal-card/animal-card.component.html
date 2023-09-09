@@ -1,16 +1,22 @@
 <div class="container">
   <div class="content">
-    <img src="/assets/images/paws.jpg" alt="Lucky" />
-
+    <img [ngSrc]="animal.coverPhotoUrl" [alt]="animal.name" width="400" height="350" />
     <div class="info">
-      <h1>Lucky</h1>
+      <h1>{{animal.name}}</h1>
       <div class="description">
-        <p><span class="tag">Location:</span> <span>Tbilisi</span></p>
-        <p><span  class="tag">Age:</span><span>1 month</span></p>
-        <p><span  class="tag">Sex:</span><span>girl</span></p>
+        <p>
+          <span class="tag">Location:</span> <span>{{ animal.location }}</span>
+        </p>
+        <p>
+          <span class="tag">Age:</span><span>{{ animal.age }} years</span>
+        </p>
+        <p>
+          <span class="tag">Sex:</span><span>{{ animal.sex }}</span>
+        </p>
       </div>
       <div class="icons">
         <img
+          *ngIf="animal.vaccinated"
           src="/assets/icons/vaccinated.png"
           alt="vaccinated"
           matTooltip="Vaccitated"
@@ -18,6 +24,7 @@
           matTooltipPosition="before"
         />
         <img
+          *ngIf="animal.sterilized"
           src="/assets/icons/sterilized.png"
           alt="sterilized"
           matTooltip="Sterilized"
@@ -25,6 +32,7 @@
           matTooltipPosition="before"
         />
         <img
+          *ngIf="animal.healthy"
           src="/assets/icons/healthy.png"
           alt="healthy"
           matTooltip="Healthy"
@@ -34,7 +42,7 @@
       </div>
 
       <div class="action">
-        <button mat-raised-button>About Lucky</button>
+        <button mat-raised-button>About {{animal.name}}</button>
       </div>
     </div>
   </div>
