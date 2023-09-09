@@ -1,0 +1,45 @@
+.container {
+  background-image: url("/assets/images/paws.jpg");
+  background-repeat: no-repeat;
+  background-position: right, left;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  .content {
+    padding: 30px;
+    margin: 50px;
+    background-color: rgba(240, 248, 255, 0.5);
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 40px;
+      line-height: 25px;
+    }
+    ul {
+      margin-bottom: 40px;
+      li {
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 25px;
+
+        span {
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
