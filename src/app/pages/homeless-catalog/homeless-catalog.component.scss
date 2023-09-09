@@ -1,0 +1,14 @@
+.container {
+  padding: 50px;
+  h1 {
+    font-size: 30px;
+    color: rgb(82, 79, 79);
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    align-items: center;
+    justify-content: center;
+  }
+}

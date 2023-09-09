@@ -1,1 +1,9 @@
-<p>homeless-catalog works!</p>
+<div class="container">
+  <h1>Find Your Furry Friend</h1>
+  <div class="content">
+      <app-animal-card
+        *ngFor="let animal of animals"
+        [animal]="animal"
+      ></app-animal-card>
+    </div>
+  </div>
