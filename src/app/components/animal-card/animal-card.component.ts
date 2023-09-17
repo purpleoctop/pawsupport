@@ -21,4 +21,8 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class AnimalCardComponent {
   @Input() animal!: Animal;
+
+  navigateToDetails(){
+    
+  }
 }

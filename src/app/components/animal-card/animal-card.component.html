@@ -1,49 +1,15 @@
-<div class="container">
-  <div class="content">
-    <img [ngSrc]="animal.coverPhotoUrl" [alt]="animal.name" width="400" height="350" />
-    <div class="info">
-      <h1>{{animal.name}}</h1>
-      <div class="description">
-        <p>
-          <span class="tag">Location:</span> <span>{{ animal.location }}</span>
-        </p>
-        <p>
-          <span class="tag">Age:</span><span>{{ animal.age }} years</span>
-        </p>
-        <p>
-          <span class="tag">Sex:</span><span>{{ animal.sex }}</span>
-        </p>
-      </div>
-      <div class="icons">
-        <img
-          *ngIf="animal.vaccinated"
-          src="/assets/icons/vaccinated.png"
-          alt="vaccinated"
-          matTooltip="Vaccitated"
-          matTooltipClass="custom-tooltip"
-          matTooltipPosition="before"
-        />
-        <img
-          *ngIf="animal.sterilized"
-          src="/assets/icons/sterilized.png"
-          alt="sterilized"
-          matTooltip="Sterilized"
-          matTooltipClass="custom-tooltip"
-          matTooltipPosition="before"
-        />
-        <img
-          *ngIf="animal.healthy"
-          src="/assets/icons/healthy.png"
-          alt="healthy"
-          matTooltip="Healthy"
-          matTooltipClass="custom-tooltip"
-          matTooltipPosition="before"
-        />
-      </div>
+<div class="container" (click)="navigateToDetails()">
+  <div class="label-top new" *ngIf="animal.isNew"><p class="label-new">NEW</p></div>
+  <div class="label-top expires" *ngIf="animal.expires"><p class="label-expires">OUT OF TIME</p></div>
+  <div class="label-top reserved" *ngIf="animal.isReserved"><p class="label-reserved">RESERVED</p></div>
 
-      <div class="action">
-        <button mat-raised-button>About {{animal.name}}</button>
-      </div>
-    </div>
+  <div class="cover">
+    <img [src]="animal.coverPhotoUrl" [alt]="animal.name" />
   </div>
+  <h1 class="bold title">{{ animal.name }}</h1>
+  <div class="flex">
+    <mat-icon class="location"> location_on</mat-icon>
+    <h3>{{ animal.location }}</h3>
+  </div>
+  <h1>{{ animal.breed }}</h1>
 </div>
