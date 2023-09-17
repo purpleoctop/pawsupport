@@ -1,15 +1,23 @@
 <div class="container" (click)="navigateToDetails()">
-  <div class="label-top new" *ngIf="animal.isNew"><p class="label-new">NEW</p></div>
-  <div class="label-top expires" *ngIf="animal.expires"><p class="label-expires">OUT OF TIME</p></div>
-  <div class="label-top reserved" *ngIf="animal.isReserved"><p class="label-reserved">RESERVED</p></div>
+  <div class="label-top new" *ngIf="animal.isNew">
+    <p class="label-new">NEW</p>
+  </div>
+  <div class="label-top expires" *ngIf="animal.expires">
+    <p class="label-expires">OUT OF TIME</p>
+  </div>
+  <div class="label-top reserved" *ngIf="animal.isReserved">
+    <p class="label-reserved">RESERVED</p>
+  </div>
 
   <div class="cover">
     <img [src]="animal.coverPhotoUrl" [alt]="animal.name" />
   </div>
   <h1 class="bold title">{{ animal.name }}</h1>
-  <div class="flex">
-    <mat-icon class="location"> location_on</mat-icon>
-    <h3>{{ animal.location }}</h3>
+  <div class="info">
+    <div class="location">
+      <mat-icon class="location-icon"> location_on</mat-icon>
+      <h2>{{ animal.location }}</h2>
+    </div>
+    <h2>{{ animal.breed }}</h2>
   </div>
-  <h1>{{ animal.breed }}</h1>
 </div>
