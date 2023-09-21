@@ -7,8 +7,8 @@
   position: relative;
   .content {
     color: #363636;
-    padding: 40px;
-    margin: 50px;
+    padding: 20px;
+    margin: 25px;
     background-color: rgba(240, 248, 255, 0.5);
     position: absolute;
     height: auto;
@@ -19,22 +19,22 @@
     overflow-y: scroll;
     border-radius: 5px;
     h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
+      font-size: 30px;
+      margin-bottom: 20px;
     }
     h2 {
-      font-size: 24px;
+      font-size: 22px;
       margin-bottom: 16px;
     }
     p {
-      font-size: 20px;
-      margin-bottom: 40px;
+      font-size: 18px;
+      margin-bottom: 20px;
       line-height: 25px;
     }
     ul {
       margin-bottom: 40px;
       li {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 20px;
         line-height: 25px;
 
