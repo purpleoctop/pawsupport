@@ -4,6 +4,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { HomelessCatalogComponent } from './pages/homeless-catalog/homeless-catalog.component';
 import { AdoptedCatalogComponent } from './pages/adopted-catalog/adopted-catalog.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
   {
     path: 'adopted-catalog',
     component: AdoptedCatalogComponent,
+  },
+  {
+    path: 'details',
+    component: DetailsComponent,
   },
   {
     path: '**',
