@@ -10,8 +10,11 @@
   </div>
 
   <div class="cover">
-    <img [src]="animal.coverPhotoUrl" [alt]="animal.name" />
+    <app-carrousel [images]="animal.images"></app-carrousel>
+    <!-- <img src='/assets/images/paws.jpg' [alt]="animal.name" /> -->
+
   </div>
+
   <h1 class="bold title">{{ animal.name }}</h1>
   <div class="info">
     <div class="location">

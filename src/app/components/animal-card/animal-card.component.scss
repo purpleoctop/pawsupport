@@ -19,6 +19,7 @@
     border-top: 0;
     border-bottom: 70px solid transparent;
     transform: rotate(-45deg);
+    z-index:10;
     &.new {
       border-bottom-color: rgb(202, 147, 238);
     }
@@ -30,7 +31,7 @@
       border-bottom-color: rgb(47, 183, 29);
     }
     .label-new {
-      position: relative;
+      position: absolute;
       left: -24px;
       top: 33px;
       color: white;
@@ -39,7 +40,7 @@
     }
 
     .label-expires {
-      position: relative;
+      position: absolute;
       left: -16px;
       top: 17px;
       color: white;
@@ -49,7 +50,7 @@
     }
 
     .label-reserved {
-      position: relative;
+      position: absolute;
       left: -36px;
       top: 35px;
       color: white;
@@ -65,19 +66,17 @@
     width: 300px;
     height: 270px;
     border: 16px solid white;
-
-    img {
-      object-fit: cover;
-      width: inherit;
-      height: inherit;
+    overflow: clip;
+    img{
+      height:200px;
+      width:200px;
     }
   }
 
-  .info{
+  .info {
     display: flex;
     width: 80%;
     justify-content: space-between;
-
   }
   .location {
     display: flex;
@@ -86,15 +85,15 @@
       margin-right: 8px;
       color: #d62d2d;
       font-size: 30px;
-      height:30px;
-      width:30px;
+      height: 30px;
+      width: 30px;
     }
   }
 
   .bold {
     font-weight: bold;
   }
-  h2{
+  h2 {
     font-weight: normal;
     margin-bottom: 0px;
   }

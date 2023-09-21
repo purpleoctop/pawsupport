@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Animal } from 'src/app/models/animal';
 import { NgOptimizedImage } from '@angular/common';
+import { CarrouselComponent } from '../carrousel/carrousel.component';
 
 @Component({
   selector: 'app-animal-card',
@@ -15,6 +16,7 @@ import { NgOptimizedImage } from '@angular/common';
     MatIconModule,
     MatTooltipModule,
     NgOptimizedImage,
+    CarrouselComponent,
   ],
   templateUrl: './animal-card.component.html',
   styleUrls: ['./animal-card.component.scss'],
@@ -22,7 +24,5 @@ import { NgOptimizedImage } from '@angular/common';
 export class AnimalCardComponent {
   @Input() animal!: Animal;
 
-  navigateToDetails(){
-    
-  }
+  navigateToDetails() {}
 }
