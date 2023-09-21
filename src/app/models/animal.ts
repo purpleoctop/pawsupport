@@ -9,7 +9,7 @@ export interface Animal {
   vaccinated: boolean;
   healthy: boolean;
   name: string;
-  coverPhotoUrl: string;
+  images: string[];
   isNew?: boolean;
   isReserved?:boolean;
 expires?: boolean;
