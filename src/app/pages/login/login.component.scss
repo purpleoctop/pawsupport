@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(186, 209, 233, 0.3);
+  padding-top: 300px;
+
+  .loginform {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    padding: 20px 40px;
+    h1 {
+      align-self: center;
+    }
+    .submit {
+      height: 40px;
+      width: 60%;
+      align-self: center;
+      background-color: rgb(186, 209, 233);
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
