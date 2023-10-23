@@ -23,7 +23,7 @@
         <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
       </button>
     </mat-form-field>
-
+    <div *ngIf="displayError">{{ displayError }}</div>
     <button class="submit" mat-raised-button (click)="login()">login</button>
   </form>
 </div>

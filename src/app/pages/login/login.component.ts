@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthService } from '../../services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -27,15 +28,24 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   loginForm!: FormGroup;
   hide = true;
-
+  displayError: string = '';
   ngOnInit() {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required],
+    });
+
+    this.authService.authError.subscribe((val) => (this.displayError = val));
+    this.authService.isUserLoggedIn.subscribe((val) => {
+      if (val) this.router.navigate(['admin']);
     });
   }
 

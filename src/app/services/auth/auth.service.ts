@@ -7,6 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class AuthService {
   isUserLoggedIn: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  authError: BehaviorSubject<string> = new BehaviorSubject('');
 
   constructor(private fireAuth: AngularFireAuth) {}
   login(email: string, password: string) {
@@ -24,6 +25,7 @@ export class AuthService {
         const errorCode = error.code;
         const errorMessage = error.message;
         this.isUserLoggedIn.next(false);
+        this.authError.next(errorMessage)
       });
   }
 

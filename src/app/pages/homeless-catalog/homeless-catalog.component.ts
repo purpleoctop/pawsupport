@@ -10,7 +10,7 @@ import { AnimalCardComponent } from '../../components/animal-card/animal-card.co
   templateUrl: './homeless-catalog.component.html',
   styleUrls: ['./homeless-catalog.component.scss'],
 })
-export class HomelessCatalogComponent {
+export class HomelessCatalogComponent  {
   animals: Animal[] = [
     {
       id: 1,
@@ -156,4 +156,11 @@ export class HomelessCatalogComponent {
       breed: 'crossbreed',
     },
   ];
+  // constructor(private homelessAnimalsService: HomelessAnimalsService) {}
+  // ngOnInit() {
+  //   this.homelessAnimalsService
+  //     .GetAnimalsList()
+  //     .snapshotChanges()
+  //     .subscribe(console.log);
+  // }
 }
