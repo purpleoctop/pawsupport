@@ -56,6 +56,10 @@ jobs:
         run: |
           unzip node-app.zip
 
+      - name: List contents after extraction
+        run: |
+          ls -l
+          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
@@ -63,4 +67,4 @@ jobs:
           app-name: 'paw-pals'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F4BD51D3A34459A81E47725107BB642 }}
-          package: dist/pawsupport
+          package: .
