@@ -54,7 +54,7 @@ jobs:
 
       - name: Extract artifact
         run: |
-          tar -xzf node-app.tar.gz
+          Expand-Archive -Path node-app.zip -DestinationPath .
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -63,4 +63,4 @@ jobs:
           app-name: 'paw-pals'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9F4BD51D3A34459A81E47725107BB642 }}
-          package: dist/
+          package: dist/pawsupport
