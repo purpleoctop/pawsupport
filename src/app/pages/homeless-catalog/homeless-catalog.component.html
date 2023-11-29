@@ -1,9 +1,11 @@
 <div class="container">
   <h1>Find Your Furry Friend</h1>
-  <div class="content">
-      <app-animal-card
-        *ngFor="let animal of animals"
-        [animal]="animal"
-      ></app-animal-card>
-    </div>
+  <div class="content" *ngIf="animals.length > 0; else empty">
+    <app-animal-card *ngFor="let animal of animals" [animal]="animal"       (click)="goToDetails(animal)"
+    ></app-animal-card>
+
   </div>
+  <ng-template #empty>
+    <p>Currently we do not have pets for you to rescue</p>
+  </ng-template>
+</div>

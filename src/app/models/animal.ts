@@ -1,17 +1,17 @@
 export interface Animal {
-  id: number;
-  type: 'dog' | 'cat';
-  age: number;
-  sex: 'girl' | 'boy';
-  breed: string;
-  location: string;
-  sterilized: boolean;
-  vaccinated: boolean;
-  healthy: boolean;
-  name: string;
-  images: string[];
-  isNew?: boolean;
-  isReserved?:boolean;
-expires?: boolean;
+  id: number,
+  type: string,
+  age: number,
+  sex: string,
+  breed: string,
+  location: string,
+  sterilized: boolean,
+  vaccinated: boolean,
+  healthy: boolean,
+  name: string,
+  images: string[],
+  isNew?: boolean,
+  isReserved?: boolean,
+  expires?: boolean,
 
 }
