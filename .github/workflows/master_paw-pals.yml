@@ -27,7 +27,7 @@ jobs:
           npm run build --if-present
       - name: List directory structure
         run: |
-          ls -l
+          dir
     
       - name: Archive production artifacts
         run: |
