@@ -33,7 +33,7 @@ export const routes: Routes = [
     component: AdoptedCatalogComponent,
   },
   {
-    path: 'details',
+    path: ':id/details',
     component: DetailsComponent,
   },
   {

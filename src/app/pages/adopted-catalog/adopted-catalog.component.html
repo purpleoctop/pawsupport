@@ -1,9 +1,12 @@
 <div class="container">
 <h1>Happy Tails: Meet Our Adopted Pets</h1>
-  <div class="content">
+  <div class="content" *ngIf="animals.length > 0; else empty">
     <app-animal-card
       *ngFor="let animal of animals"
       [animal]="animal"
     ></app-animal-card>
   </div>
+  <ng-template #empty>
+    <p>Rescued animals info will be available soon</p>
+  </ng-template>
 </div>

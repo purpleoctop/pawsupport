@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImportantStuffComponent } from '../important-stuff/important-stuff.component';
 import { CarrouselComponent } from '../carrousel/carrousel.component';
+import { Animal } from '../../models/animal';
 
 @Component({
   selector: 'app-details-card',
@@ -11,10 +12,11 @@ import { CarrouselComponent } from '../carrousel/carrousel.component';
   styleUrls: ['./details-card.component.scss'],
 })
 export class DetailsCardComponent {
-  images = [
-    'assets/images/dog-1.jpeg',
-    'assets/images/dog-2.jpeg',
-    'assets/images/paws.jpg',
-    'assets/images/dog-2.jpeg',
-  ];
+  @Input() animal!: Animal;
+  // images = [
+  //   'assets/images/dog-1.jpeg',
+  //   'assets/images/dog-2.jpeg',
+  //   'assets/images/paws.jpg',
+  //   'assets/images/dog-2.jpeg',
+  // ];
 }
