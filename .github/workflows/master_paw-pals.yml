@@ -54,7 +54,7 @@ jobs:
 
       - name: Extract artifact
         run: |
-          Expand-Archive -Path node-app.zip -DestinationPath .
+          unzip node-app.zip
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
