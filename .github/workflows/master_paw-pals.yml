@@ -29,9 +29,9 @@ jobs:
         run: |
           cd
     
-      - name: Archive production artifacts
+      - name: Archive production artifacts using PowerShell
         run: |
-          tar -czf node-app.tar.gz dist/pawsupport/
+          Compress-Archive -Path dist/pawsupport -DestinationPath node-app.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
