@@ -25,13 +25,10 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-      - name: List directory structure
-        run: |
-          cd
     
       - name: Archive production artifacts using PowerShell
         run: |
-          Compress-Archive -Path dist/pawsupport -DestinationPath node-app.zip
+          Compress-Archive -Path dist -DestinationPath node-app.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
